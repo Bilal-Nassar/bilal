@@ -2,6 +2,7 @@
 const formEl=document.querySelector("#form");
 const email=document.querySelector("#email")
 const password=document.querySelector("#password");
+const username=document.querySelector("#username")
 
 
 formEl.addEventListener('submit',(e)=>{
@@ -13,6 +14,21 @@ formEl.addEventListener('submit',(e)=>{
  const checkInputs=()=>{
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
+    const usernameValue=username?.value.trim()
+    
+
+    if(!usernameValue){
+      setErrFor(username,"Email cannot be blank");
+     
+    }
+    else if(usernameValue.length<6){
+        setErrFor(username,"Username must be 6 letters")
+    }
+    else{
+      setSuccessFor(username);
+
+    }
+    
    
     if(!emailValue){
         
@@ -48,18 +64,21 @@ formEl.addEventListener('submit',(e)=>{
 
 
  const setErrFor=(input,msg)=>{
-      const  formctr=input.parentElement;
-      const small=formctr.querySelector("small");
-      const wrong=formctr.querySelector(".fa-circle-xmark");
-      const check=formctr.querySelector(".fa-circle-check");
+       
+  if(input){
+    const  formctr=input.parentElement;
+    const small=formctr.querySelector("small");
+    const wrong=formctr.querySelector(".fa-circle-xmark");
+    const check=formctr.querySelector(".fa-circle-check");
 
-      small.innerText=msg;
-      small.classList.remove("hidden")
-      input.classList.remove("border-slate-400")
-      input.classList.add("border-red-500")
-      wrong.classList.remove("invisible")
-      check.classList.add("invisible")
-
+    small.innerText=msg;
+    small.classList.remove("hidden")
+    input.classList.remove("border-slate-400")
+    input.classList.add("border-red-500")
+    wrong.classList.remove("invisible")
+    check.classList.add("invisible")
+  }
+  
 
       
  }

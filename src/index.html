@@ -1,190 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job portal</title>
-    <link rel="stylesheet" href="./css/output.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job portal</title>
+  <link rel="stylesheet" href="./css/output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 </head>
+
 <body>
-       
-    <main class=" w-full min-h-screen flex flex-col items-center bg-[#F6F5FB]">
 
-             <nav class="  w-full flex fixed top-0 bg-[#F6F5FB]  shadow-lg flex-row px-5 py-4 justify-around  items-center">
-                      <div class=" flex  gap-5 items-center">
-                        <a href="/src/index.html"><h2 class=" font-bold text-3xl px-7 font-logo ">Sakthi</h2></a>
-                        <ul class=" flex gap-7 items-center text-[#3c4252] capitalize ">
-                           <li class="cursor-pointer hover:border-b-[3px] border-orange-500 ">jobs</li>
-                           <li class="cursor-pointer hover:border-b-[3px] border-orange-500 ">companies</li>
-                           <li class="cursor-pointer hover:border-b-[3px] border-orange-500 ">services</li>
-                        </ul>
+  <main class=" w-full min-h-screen flex flex-col items-center bg-[#F6F5FB]">
 
-                      </div>
-                     <div class="flex items-center gap-8  ">
-                        <a href="./pages/login.html">
-                          <button class="rounded-2xl capitalize px-4 py-1 border-[#275DF5] border-[1px] text-[#275DF5] font-semibold">login</button>
-                        </a>
-                         <button class=" rounded-2xl capitalize px-4 py-1 bg-[#ff7139] font-bold text-white ">register</button>
-                     </div>
+    <nav class=" z-10  w-full flex fixed top-0 bg-[#F6F5FB]  shadow-lg flex-row px-5 py-4 justify-around  items-center">
+      <div class=" flex  gap-5 items-center">
+        <a href="/src/index.html">
+          <h2 class=" font-bold text-3xl px-7 font-logo ">JobSeekers </h2>
+        </a>
+        <ul class=" flex gap-7 items-center text-[#3c4252] capitalize ">
+          <li class="cursor-pointer hover:border-b-[3px] border-orange-500 ">jobs</li>
+          <li class="cursor-pointer hover:border-b-[3px] border-orange-500 ">companies</li>
+          <li class="cursor-pointer hover:border-b-[3px] border-orange-500 ">services</li>
+        </ul>
+
+      </div>
+      <div class="flex items-center gap-8  ">
+        <a href="./pages/login.html">
+          <button
+            class="rounded-2xl capitalize px-4 py-1 border-[#275DF5] border-[1px] text-[#275DF5] font-semibold hover:bg-blue-500 hover:text-white ">login</button>
+        </a>
+       <a href="./pages/register.html">
+        <button class=" rounded-2xl capitalize px-4 py-1 bg-[#ff7139] font-semibold text-white hover:-translate-y-1 duration-200 hover:bg-orange-400 ">register</button>
+       </a>
+      </div>
 
 
-             </nav>
-             
-             <main class="w-[80%]  items-center flex flex-col  min-h-screen">
-              <!-- header section -->
-                  <div class=" p-10  m-16 flex flex-col items-center gap-4">
-                      <h1 class=" text-[40px] font-bold">Find your dream job now
-                    </h1>
-                    <p class=" font-medium text-xl">5 lakh+ jobs for you to explore
-                    </p>
-                  </div>
+    </nav>
+
+    <main class="w-[80%]  items-center flex flex-col  min-h-screen">
+      <!-- header section -->
+      <div class="text-slate-8  00 p-10  m-20 flex flex-col items-center gap-4">
+        <h1 class=" text-[40px] font-bold">Find your dream job now
+        </h1>
+        <p class=" font-medium text-xl">5 lakh+ jobs for you to explore
+        </p>
+      </div>
+
+     
+      <!-- search section -->
+      <div class="flex flex-wrap items-center justify-center shadow-xl bg-white rounded-full h-[70px] px-5  ">
+        <i class="fa-solid text-slate-400 fa-magnifying-glass"></i>
+
+        <input class=" w-[300px] px-5 flex-1 py-1 focus:outline-none placeholder:font-bold capitalize" type="text"
+          focus:outline-none placeholder="Enter skill /companies ">
+        <p class="text-slate-400">|</p>
+        <input class=" px-5 py-1 focus:outline-none placeholder:font-bold capitalize" type="text" focus:outline-none
+          placeholder="experience">
+        <p class="text-slate-400">|</p>
+        <input class=" px-5 py-1 focus:outline-none placeholder:font-bold capitalize" type="text"
+          placeholder="location">
+        <button class="capitalize rounded-2xl  text-white bg-[#275DF5] px-9 py-1 ">search</button>
+
+      </div>
+
+      <!-- job option secction  -->
+      <div class=" w-[80%] flex flex-wrap justify-center gap-8 m-20 ">
+        <div
+          class="flex cursor-pointer hover:scale-105    text-[#74737C] items-center gap-5 border-[1px] border-slate-400 shadow-lg  p-4 rounded-lg ">
+          <i class="fa-solid text-[#74737C] fa-house"></i>
+          <p class="capitalize">remote <i class="fa-solid fa-angle-right"></i> </p>
+
+        </div>
+        <div
+          class="flex cursor-pointer hover:scale-105    text-[#74737C] items-center gap-5 border-[1px] border-slate-400 shadow-lg  p-4 rounded-lg ">
+          <i class="fa-regular fa-rocket"></i>
+          <p class="capitalize">startup <i class="fa-solid fa-angle-right"></i> </p>
+
+        </div>
+        <div
+          class=" flex cursor-pointer hover:scale-105    text-[#74737C] items-center gap-5 border-[1px] border-slate-400 shadow-lg  p-4 rounded-lg ">
+          <i class="fa-solid fa-user"></i>
+          <p class="capitalize">HR <i class="fa-solid fa-angle-right"></i> </p>
+
+        </div>
+        <div
+          class="flex cursor-pointer hover:scale-105    text-[#74737C] items-center gap-5 border-[1px] border-slate-400 shadow-lg  p-4 rounded-lg ">
+          <i class="fa-brands fa-uncharted"></i>
+          <p class="capitalize">software <i class="fa-solid fa-angle-right"></i> </p>
+
+        </div>
+        <div
+          class="flex cursor-pointer hover:scale-105    text-[#74737C] items-center gap-5 border-[1px] border-slate-400 shadow-lg  p-4 rounded-lg ">
+          <i class="fa-regular fa-graduation-cap"></i>
+          <p class="capitalize">fresher <i class="fa-solid fa-angle-right"></i> </p>
+
+        </div>
+        <div
+          class="flex cursor-pointer hover:scale-105    text-[#74737C] items-center gap-5 border-[1px] border-slate-400 shadow-lg  p-4 rounded-lg ">
+          <i class="fa-regular fa-gear"></i>
+          <p class="capitalize">engineering<i class="fa-solid fa-angle-right"></i> </p>
+
+        </div>
+        <div
+          class="flex cursor-pointer hover:scale-105    text-[#74737C] items-center gap-5 border-[1px] border-slate-400 shadow-lg  p-4 rounded-lg ">
+          <i class="fa-light fa-file-certificate"></i>
+          <i class="fa-solid text-[#74737C] fa-house"></i>
+          <p class="capitalize">intership <i class="fa-solid fa-angle-right"></i> </p>
+
+        </div>
+
+      </div>
+      <div>
+        <audio controls>
+          <source src="./img/Avengers-Theme.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio>
+       </div>
+       <div>
+        <video width="320" height="240" controls>
+          <source src="./img/video.mp4" type="video/mp4">
+          <!-- <source src="movie.ogg" type="video/ogg"> -->
+        Your browser does not support the video tag.
+        </video>
+
+       </div>
+      <!-- sponserd section -->
+
+      <div class="flex  flex-col gap-10 items-center my-10 ">
+        <p class="font-bold text-2xl ">Sponsored companies
+        </p>
+        <div class="flex gap-10 w-[80%] p-5 flex-wrap justify-center">
+
+          <div
+            class="flex gap-5 text-sm  text-slate-800 border-[1px] w-[160px] h-[160px]  border-gray-400 rounded-xl p-5 flex-col items-center hover:-translate-y-1 hover:translate-x-1 hover:shadow-2xl hover:border-blue-500 duration-200">
+            <div class="w-[80px] h-[80px]">
+              <img class="w-full h-full object-contain " src="./img/tata.png" alt="">
+            </div>
+            <p class="font-bold ">TATA</p>
+          </div>
+          <div
+            class="flex gap-5 text-sm text-slate-800 border-[1px] w-[160px] h-[160px]  border-gray-400 rounded-xl p-5 flex-col items-center hover:-translate-y-1 hover:translate-x-1 cursor-pointer hover:shadow-2xl hover:border-blue-500 duration-200">
+            <div class="w-[80px] h-[80px]">
+              <img class="w-full h-full " src="./img/accenture.png" alt="">
+            </div>
+            <p class="font-bold ">Accenture</p>
+
+          </div>
+          <div
+            class="flex  gap-5 text-sm text-slate-800 border-[1px] w-[160px] h-[160px]  border-gray-400 rounded-xl p-5 flex-col items-center hover:-translate-y-1 hover:translate-x-1 cursor-pointer hover:shadow-2xl hover:border-blue-500 duration-200">
+            <div class="w-[80px] h-[80px]">
+              <img class="w-full h-full object-contain " src="./img/google.png" alt="">
+            </div>
+            <p class="font-bold ">TATA</p>
+          </div>
+
+          <div
+            class="flex gap-5 text-sm text-slate-800 border-[1px] w-[160px] h-[160px]  border-gray-400 rounded-xl p-5 flex-col items-center hover:-translate-y-1 hover:translate-x-1 cursor-pointer hover:shadow-2xl hover:border-blue-500 duration-200">
+            <div class="w-[80px] h-[80px]">
+              <img class="w-full h-full " src="./img/meta.png" alt="">
+            </div>
+            <p class="font-bold ">Meta</p>
+          </div>
+          <div
+            class="flex gap-5 text-sm text-slate-800 border-[1px] w-[160px] h-[160px]  border-gray-400 rounded-xl p-5 flex-col items-center hover:-translate-y-1 hover:translate-x-1 cursor-pointer hover:shadow-2xl hover:border-blue-500 duration-200">
+            <div class="w-[80px] h-[80px]">
+              <img class="w-full h-full object-contain " src="./img/vercel.png" alt="">
+            </div>
+            <p class="font-bold ">Vercel</p>
+          </div>
+          <div
+            class="flex gap-5 text-sm text-slate-800 border-[1px] w-[160px] h-[160px]  border-gray-400 rounded-xl p-5 flex-col items-center hover:-translate-y-1 hover:translate-x-1 cursor-pointer hover:shadow-2xl hover:border-blue-500 duration-200">
+            <div class="w-[80px] h-[80px]">
+              <img class="w-full h-full " src="./img/hdfc.png" alt="">
+            </div>
+            <p class="font-bold ">HDFC</p>
+          </div>
+          <div
+            class="flex gap-5 text-sm text-slate-800 border-[1px] w-[160px] h-[160px]  border-gray-400 rounded-xl p-5 flex-col items-center hover:-translate-y-1 hover:translate-x-1 cursor-pointer hover:shadow-2xl hover:border-blue-500 duration-200">
+            <div class="w-[80px] h-[80px]">
+              <img class="w-full h-full " src="./img/jsw.jfif" alt="">
+            </div>
+            <p class="font-bold ">JSW</p>
+          </div>
+          <div
+            class="flex gap-5 text-sm text-slate-800 border-[1px] w-[160px] h-[160px]  border-gray-400 rounded-xl p-5 flex-col items-center hover:-translate-y-1 hover:translate-x-1 cursor-pointer hover:shadow-2xl hover:border-blue-500 duration-200">
+            <div class="w-[80px] h-[80px]">
+              <img class="w-full h-full " src="./img/wipro.png" alt="">
+            </div>
+            <p class="font-bold ">Wipro</p>
+          </div>
+
+
+        </div>
+      </div>
+         
+
+        <div class="flex flex-col items-center
+        ">
+        <h1 class=" font-bold text-xl py-3">Image Map</h1>
+        <img src="./img/laptop.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+         
+        </div>
+
+        <map name="workmap">
+          <area shape="rect" coords="34,44,270,350" alt="Computer" href="./pages/test.html">
+          <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+          <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+        </map>
         
-                      <!-- search section -->
-                  <div class="flex flex-wrap items-center justify-center shadow-xl bg-white rounded-full h-[70px] px-5  ">
-                    <i   class="fa-solid text-slate-400 fa-magnifying-glass"></i>
-                     
-                    <input  class=" w-[300px] px-5 flex-1 py-1 focus:outline-none placeholder:font-bold capitalize" type="text" focus:outline-none placeholder="Enter skill /companies ">
-                    <p  class="text-slate-400" >|</p >
-                    <input  class=" px-5 py-1 focus:outline-none placeholder:font-bold capitalize" type="text" focus:outline-none placeholder="experience">
-                    <p class="text-slate-400" >|</p>
-                    <input  class=" px-5 py-1 focus:outline-none placeholder:font-bold capitalize"  type="text" placeholder="location">
-                    <button class="capitalize rounded-2xl  text-white bg-[#275DF5] px-9 py-1 ">search</button>
+      
 
-                   </div>
+<div class="relative w-full p-16 m-10 overflow-x-auto">
+  <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <tr>
+              <th scope="col" class="px-6 py-3">
+                  
+            Companies
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  location
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Department
+              </th>
+             
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                ZOHO
+              </th>
+              <td class="px-6 py-4">
+                Chennai
+              </td>
+              <td class="px-6 py-4">
+                IT
+              </td>
+             
+          </tr>
+          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                Accenture
 
-                   <!-- job option secction  -->
-                    <div class=" w-[80%] flex flex-wrap justify-center gap-8 m-20 ">
-                      <div class="flex cursor-pointer hover:scale-105    text-[#74737C] items-center gap-5 border-[1px] border-slate-400 shadow-lg  p-4 rounded-lg "> 
-                        <i class="fa-solid text-[#74737C] fa-house"></i>
-                          <p class="capitalize">remote <i class="fa-solid fa-angle-right"></i> </p>
-                         
-                      </div>
-                      <div class="flex cursor-pointer hover:scale-105    text-[#74737C] items-center gap-5 border-[1px] border-slate-400 shadow-lg  p-4 rounded-lg "> 
-                        <i class="fa-regular fa-rocket"></i>
-                          <p class="capitalize">startup <i class="fa-solid fa-angle-right"></i> </p>
-                         
-                      </div>
-                      <div class="flex cursor-pointer hover:scale-105    text-[#74737C] items-center gap-5 border-[1px] border-slate-400 shadow-lg  p-4 rounded-lg "> 
-                        <i class="fa-solid fa-user"></i>
-                          <p class="capitalize">HR <i class="fa-solid fa-angle-right"></i> </p>
-                         
-                      </div>
-                      <div class="flex cursor-pointer hover:scale-105    text-[#74737C] items-center gap-5 border-[1px] border-slate-400 shadow-lg  p-4 rounded-lg "> 
-                        <i class="fa-brands fa-uncharted"></i>
-                          <p class="capitalize">software <i class="fa-solid fa-angle-right"></i> </p>
-                         
-                      </div>
-                      <div class="flex cursor-pointer hover:scale-105    text-[#74737C] items-center gap-5 border-[1px] border-slate-400 shadow-lg  p-4 rounded-lg "> 
-                        <i class="fa-regular fa-graduation-cap"></i>
-                          <p class="capitalize">fresher <i class="fa-solid fa-angle-right"></i> </p>
-                         
-                      </div>
-                      <div class="flex cursor-pointer hover:scale-105    text-[#74737C] items-center gap-5 border-[1px] border-slate-400 shadow-lg  p-4 rounded-lg "> 
-                        <i class="fa-regular fa-gear"></i>
-                          <p class="capitalize">engineering<i class="fa-solid fa-angle-right"></i> </p>
-                         
-                      </div>  <div class="flex cursor-pointer hover:scale-105    text-[#74737C] items-center gap-5 border-[1px] border-slate-400 shadow-lg  p-4 rounded-lg "> 
-                        <i class="fa-light fa-file-certificate"></i>
-                        <i class="fa-solid text-[#74737C] fa-house"></i>
-                          <p class="capitalize">intership <i class="fa-solid fa-angle-right"></i> </p>
-                         
-                      </div>
+              </th>
+              <td class="px-6 py-4">
+                  Bengaluru
+              </td>
+              <td class="px-6 py-4">
+                  IT
+              </td>
+             
+          </tr>
+          <tr class="bg-white dark:bg-gray-800">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                HDFC
+              </th>
+              <td class="px-6 py-4">
+                  Chennai
+              </td>
+              <td class="px-6 py-4">
+                  Bank
+              </td>
+              
+          </tr>
+      </tbody>
+  </table>
+</div>
 
-                    </div>
+    
+      <!--  Footer section-->
+      <div class="flex bg-white justify-around w-full p-12 my-6 ">
+        <div class="flex flex-col gap-3">
+          <p class="capitalize  font-bold font-logo text-2xl
+                               ">JobSeekers</p>
+          <div class="flex flex-col gap-3">
+            <p class="capitalize text-slate-600">connnect with us</p>
+            <div class=" flex gap-2">
+              <i class=" text-slate-800 text-xl cursor-pointer hover:text-blue-600 fa-brands fa-facebook-f"></i>
+              <i class=" text-slate-800 text-xl cursor-pointer hover:text-pink-500 fa-brands fa-instagram"></i>
+              <i class=" text-slate-800 text-xl cursor-pointer hover:text-blue-500 fa-brands fa-twitter"></i>
+              <i class=" text-slate-800 text-xl cursor-pointer hover:text-blue-800 fa-brands fa-linkedin"></i>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 ">
+          <a class="text-sm capitalize cursor-pointer hover:text-blue-400 text-slate-500 " href="">about us</a>
+          <a class="text-sm capitalize cursor-pointer hover:text-blue-400 text-slate-500 " href="">careers</a>
+          <a class="text-sm capitalize cursor-pointer hover:text-blue-400 text-slate-500 " href="">employer home</a>
+          <a class="text-sm capitalize cursor-pointer hover:text-blue-400 text-slate-500 " href="">credits</a>
 
-                    <!-- sponserd section -->
+        </div>
 
-                    <div class="flex  flex-col gap-10 items-center my-10 ">
-                         <p class="font-bold text-2xl ">Sponsored companies
-                        </p>
-                         <div class="flex gap-10 w-[80%] p-5 flex-wrap justify-center">
-                
-                         <div class="flex gap-5 text-sm text-slate-800 border-[1px] w-[150px] h-[150px]  border-gray-400 rounded-xl p-5 flex-col items-center hover:-translate-y-1 hover:translate-x-1 hover:shadow-2xl hover:border-blue-500 duration-200">
-                          <img src="./img/tata.png" width="90"   alt="">
-                          <p class="font-bold ">TATA</p>
-                       </div>
-                       <div class="flex gap-5 text-sm text-slate-800 border-[1px] w-[150px] h-[150px]  border-gray-400 rounded-xl p-5 flex-col items-center hover:-translate-y-1 hover:translate-x-1 cursor-pointer hover:shadow-2xl hover:border-blue-500 duration-200">
-                        <img src="./img/google.png" width="70" alt="">
-                        <p class="font-bold ">Google</p>
+        <div class="flex flex-col gap-3">
+          <a class="text-sm capitalize cursor-pointer hover:text-blue-400 text-slate-500 " href="">help center</a>
+          <a class="text-sm capitalize cursor-pointer hover:text-blue-400 text-slate-500 " href="">notices</a>
+          <a class="text-sm capitalize cursor-pointer hover:text-blue-400 text-slate-500 " href="">Grievances</a>
+          <a class="text-sm capitalize cursor-pointer hover:text-blue-400 text-slate-500 " href="">Report issue</a>
 
-                     </div>
-                       <div class="flex  gap-5 text-sm text-slate-800 border-[1px] w-[150px] h-[150px]  border-gray-400 rounded-xl p-5 flex-col items-center hover:-translate-y-1 hover:translate-x-1 cursor-pointer hover:shadow-2xl hover:border-blue-500 duration-200">
-                        <img src="./img/google.png" width="70"   alt="">
-                        <p class="font-bold ">TATA</p>
-                     </div>
+        </div>
+        <div class="flex flex-col gap-3">
+          <a class="text-sm capitalize cursor-pointer hover:text-blue-400 text-slate-500 " href="">Privacy policy</a>
+          <a class="text-sm capitalize cursor-pointer hover:text-blue-400 text-slate-500 " href="">Terms &
+            conditions</a>
+          <a class="text-sm capitalize cursor-pointer hover:text-blue-400 text-slate-500 " href="">Fraud alert</a>
+          <a class="text-sm capitalize cursor-pointer hover:text-blue-400 text-slate-500 " href="">Trust & safety</a>
+        </div>
 
-                       <div class="flex gap-5 text-sm text-slate-800 border-[1px] w-[150px] h-[150px]  border-gray-400 rounded-xl p-5 flex-col items-center hover:-translate-y-1 hover:translate-x-1 cursor-pointer hover:shadow-2xl hover:border-blue-500 duration-200">
-                        <img src="./img/download.png" width="200" height="200"  alt="">
-                        <p class="font-bold ">TATA</p>
-                     </div>
-                     <div class="flex gap-5 text-sm text-slate-800 border-[1px] w-[150px] h-[150px]  border-gray-400 rounded-xl p-5 flex-col items-center hover:-translate-y-1 hover:translate-x-1 cursor-pointer hover:shadow-2xl hover:border-blue-500 duration-200">
-                      <img src="./img/download.png" width="200" height="200"  alt="">
-                      <p class="font-bold ">TATA</p>
-                   </div>
-                   <div class="flex gap-5 text-sm text-slate-800 border-[1px] w-[150px] h-[150px]  border-gray-400 rounded-xl p-5 flex-col items-center hover:-translate-y-1 hover:translate-x-1 cursor-pointer hover:shadow-2xl hover:border-blue-500 duration-200">
-                    <img src="./img/download.png" width="200" height="200"  alt="">
-                    <p class="font-bold ">TATA</p>
-                 </div>
-                 <div class="flex gap-5 text-sm text-slate-800 border-[1px] w-[150px] h-[150px]  border-gray-400 rounded-xl p-5 flex-col items-center hover:-translate-y-1 hover:translate-x-1 cursor-pointer hover:shadow-2xl hover:border-blue-500 duration-200">
-                  <img src="./img/download.png" width="200" height="200"  alt="">
-                  <p class="font-bold ">TATA</p>
-               </div>
-               <div class="flex gap-5 text-sm text-slate-800 border-[1px] w-[150px] h-[150px]  border-gray-400 rounded-xl p-5 flex-col items-center hover:-translate-y-1 hover:translate-x-1 cursor-pointer hover:shadow-2xl hover:border-blue-500 duration-200">
-                <img src="./img/download.png" width="200" height="200"  alt="">
-                <p class="font-bold ">TATA</p>
-             </div>
+      </div>
 
-                    
-                         </div>
-                    </div>
-                
-
-                   <!--  Footer section-->
-                   <div class="flex bg-white justify-around w-full p-12 my-6 ">
-                          <div class="flex flex-col gap-3">
-                              <p class="capitalize  font-bold font-logo text-2xl
-                               ">Sakthi</p>
-                              <div class="flex flex-col gap-3">
-                                <p class="capitalize text-slate-600">connnect with us</p>
-                                 <div class=" flex gap-2">
-                                  <i class=" text-slate-800 text-xl cursor-pointer hover:text-blue-600 fa-brands fa-facebook-f"></i>
-                                  <i class=" text-slate-800 text-xl cursor-pointer hover:text-pink-500 fa-brands fa-instagram"></i>
-                                  <i class=" text-slate-800 text-xl cursor-pointer hover:text-blue-500 fa-brands fa-twitter"></i>
-                                  <i class=" text-slate-800 text-xl cursor-pointer hover:text-blue-800 fa-brands fa-linkedin"></i>
-                                 </div>
-                              </div>
-                          </div>
-                          <div class="flex flex-col gap-3 ">
-                             <a class="text-sm capitalize cursor-pointer hover:text-blue-400 text-slate-500 " href="">about us</a>
-                             <a class="text-sm capitalize cursor-pointer hover:text-blue-400 text-slate-500 " href="">careers</a>
-                             <a class="text-sm capitalize cursor-pointer hover:text-blue-400 text-slate-500 " href="">employer home</a>
-                             <a class="text-sm capitalize cursor-pointer hover:text-blue-400 text-slate-500 " href="">credits</a>
-                            
-                          </div>
-
-                          <div class="flex flex-col gap-3">
-                            <a class="text-sm capitalize cursor-pointer hover:text-blue-400 text-slate-500 " href="">help center</a>
-                            <a class="text-sm capitalize cursor-pointer hover:text-blue-400 text-slate-500 " href="">notices</a>
-                            <a class="text-sm capitalize cursor-pointer hover:text-blue-400 text-slate-500 " href="">Grievances</a>
-                            <a class="text-sm capitalize cursor-pointer hover:text-blue-400 text-slate-500 " href="">Report issue</a>
-
-                          </div>
-                          <div class="flex flex-col gap-3">
-                            <a class="text-sm capitalize cursor-pointer hover:text-blue-400 text-slate-500 " href="">Privacy policy</a>  
-                            <a class="text-sm capitalize cursor-pointer hover:text-blue-400 text-slate-500 " href="">Terms & conditions</a>    
-                            <a class="text-sm capitalize cursor-pointer hover:text-blue-400 text-slate-500 " href="">Fraud alert</a>  
-                            <a class="text-sm capitalize cursor-pointer hover:text-blue-400 text-slate-500 " href="">Trust & safety</a>  
-                          </div>
-
-                   </div>
-                   
-             </main>
-
-           
-            
     </main>
 
+
+
+  </main>
+
 </body>
+
 </html>
