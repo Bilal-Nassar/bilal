@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../../css/output.css">
+</head>
+
+<body>
+    <div id="demo">
+        <h2>The XMLHttpRequest</h2>
+        <button class=" p-3 bg-blue-500" type="button" onclick="loadDoc()">Change Content</button>
+    </div>
+
+    <script>
+        function loadDoc() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function () {
+                const data = JSON.parse(this.responseText)
+                console.log(data);
+                const element = data.map((post) => {
+                    return ` 
+    <p class="font-bold text-blue-900">Post title:<span class=" text-orange-500" >${post.title}</span></p>
+    
+    <p class="font-bold text-blue-900">Post description:<span class=" text-orange-500" >${post.body}</span></p>
+
+`
+                })
+                console.log(element);
+                document.getElementById("demo").innerHTML = element
+
+
+            }
+            xhttp.open("GET", "ajax.json");
+            xhttp.send();
+        }
+    </script>
+</body>
+
+</html>
